@@ -846,7 +846,7 @@ export default function App() {
 
               <div className="grid grid-cols-2 gap-2 md:gap-4">
                 {currentQuiz?.a.map((option, idx) => {
-                  let btnStyle = "bg-gray-900/80 border-gray-600 text-gray-300 hover:bg-gray-700 hover:border-white hover:text-white hover:scale-[1.02]";
+                  let btnStyle = "bg-gray-900/80 border-gray-600 text-gray-300 [@media(hover:hover)]:hover:bg-gray-700 [@media(hover:hover)]:hover:border-white [@media(hover:hover)]:hover:text-white [@media(hover:hover)]:hover:scale-[1.02]";
                   let icon = null;
                   if (feedbackState.show) {
                     if (feedbackState.selectedIdx === idx) {
