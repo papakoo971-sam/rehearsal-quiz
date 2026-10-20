@@ -862,7 +862,7 @@ export default function App() {
                     }
                   }
                   return (
-                    <button key={idx} onClick={() => handleAnswer(idx)} disabled={feedbackState.show} className={`min-h-[3.5rem] md:h-16 skew-ui border md:border-2 transition-all duration-100 font-dh text-lg md:text-2xl flex items-center justify-center relative overflow-hidden ${btnStyle}`}>
+                    <button key={idx} onClick={() => handleAnswer(idx)} disabled={feedbackState.show} className={`min-h-[3.5rem] md:h-16 skew-ui -skew-x-[15deg] border md:border-2 transition-all duration-100 font-dh text-lg md:text-2xl flex items-center justify-center relative overflow-hidden ${btnStyle}`}>
                       <span className="skew-ui-rev flex items-center px-1 break-keep text-center leading-tight">{icon}{option}</span>
                       <div className="absolute top-0 left-0 w-full h-[40%] bg-white/10 pointer-events-none"></div>
                     </button>
