@@ -270,10 +270,17 @@ export default function App() {
             // 인덱스를 못 찾았으면 기본값 0 (에러 방지)
             if (correctIndex === -1) correctIndex = 0;
 
+            // 보기 순서 섞기 (정답 위치가 한쪽에 몰리지 않도록)
+            const order = opts.map((_, i) => i);
+            for (let i = order.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [order[i], order[j]] = [order[j], order[i]];
+            }
+
             return {
                 q: item.q || item.question,
-                a: opts,
-                c: correctIndex
+                a: order.map(i => opts[i]),
+                c: order.indexOf(correctIndex)
             };
         });
 
